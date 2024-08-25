@@ -1,15 +1,17 @@
 # Mega_Script.py
-from functions import funcoes
+from functions import FUNC
 
-vm = funcoes()
+vm = FUNC()
 
 func_list = ["" for _ in range(255)]
+
 
 def add(tex):
     for j in range(len(func_list)):
         if func_list[j] == '':
             func_list[j] = tex
             break
+
 
 halt = False
 add("$define.x=0")
