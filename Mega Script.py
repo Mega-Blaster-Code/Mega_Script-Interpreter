@@ -2,7 +2,6 @@ from functions import *
 lst = [None for _ in range(100)]
 
 def define(name, val):
-    # Chama a função let para tentar inserir a variável
     index = let(name, val, lst)
 
     if index == -1:
