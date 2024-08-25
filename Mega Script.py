@@ -11,9 +11,7 @@ def define(name, val):
         print(f"Variável '{name}' inserida no índice {index}")
 
 
-# Testa a função define
 for i in range(10):
     define(f"x", 25)
 
-# Imprime a lista final
 print(lst)
