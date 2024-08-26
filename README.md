@@ -27,7 +27,7 @@ add("$define.x=0")       # Define a variable x with the value 0
 add("$define.add=1")     # Define a variable add with the value 1
 add("#sum:x=x.add")      # Sum the values of x and add, store the result in x
 add("/prn.x")            # Print the value of x
-add("!goto=2")           # Go to line 2
+add("!jumpto=2")           # Go to line 2
 ```
 
 ## Language Features
@@ -47,7 +47,7 @@ add("!goto=2")           # Go to line 2
 
 ### JumpTo
 - **jumpto**:
-  - Jump to a specific line using the `goto` keyword.
+  - Jump to a specific line using the `jumpto` keyword.
   - `!jumpto=line` - Jumps to the specified line.
 
 ### Printing
@@ -77,3 +77,49 @@ add("!goto=2")           # Go to line 2
 - **Compiler Implementation**: In the future, Mega_Script will include a compiler to translate the language into assembly or other low-level languages.
 - **Error Handling**: Currently, basic error handling is implemented, but more sophisticated checks and messages will be added.
 - **Optimizations**: As the project is still in its initial phase, the program is not fully optimized and requires additional adjustments to improve its performance and functionality.
+
+## Examples
+
+### Example 1: **Infinite Hello World**
+This example continuously prints "hello world".
+
+```python
+add("/prn.'hello world'")  # Prints 'hello world'
+add("!jumpto=0")           # Jumps back to the first line, creating an infinite loop
+```
+
+### Example 2: **Basic Addition**
+This example demonstrates a simple addition operation between two variables and prints the result.
+
+```python
+add("$define.a=7")        # Define a variable a with the value 7
+add("$define.b=3")        # Define a variable b with the value 3
+add("$define.result=0")   # Define a variable result with the value 0
+add("#sum:result=a.b")    # Add num1 and num2, storing the result in 'result'
+add("/prn.result")        # Print the result of the addition
+```
+
+### Example 3: **Multiplication Example**
+This example multiplies two numbers and prints the result.
+
+```python
+add("$define.a=5")           # Define a variable a with the value 5
+add("$define.b=10")          # Define a variable b with the value 10
+add("$define.result=0")      # Define a variable result with the value 0
+add("#mul:result=a.b")       # Multiply a and b, storing the result in 'result'
+add("/prn.result")           # Print the result of the multiplication
+```
+
+
+### Example 4: **Simple Counter**
+This example increments a counter and prints its value.
+
+```python
+add("$define.counter=0")    # Define a variable counter with the value 0
+add("$define.increment=1")  # Define a variable increment with the value 1
+add("#sum:counter=counter.increment") # Increment the counter by 1
+add("/prn.counter")         # Print the current value of counter
+add("!jumpto=2")            # Jump back to the third line to repeat the process
+```
+
+
