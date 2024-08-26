@@ -8,6 +8,7 @@ Mega_Script is a low-level programming language interpreter designed for simplic
 - [Language Features](#language-features)
   - [Variable Management](#variable-management)
   - [Arithmetic Operations](#arithmetic-operations)
+  - [Jump To](#jumpto)
   - [Functions](#functions)
   - [Printing](#printing)
   - [Conditional Jumps](#conditional-jumps)
@@ -44,16 +45,8 @@ add("!goto=2")           # Go to line 2
   - `#mul:var1=var2.var3` - Multiplies `var3` by `var2` and stores the result in `var1`.
   - `#div:var1=var2.var3` - Divides `var3` by `var2` and stores the result in `var1`.
 
-- **Goto**: Jump to a specific line using the `goto` keyword.
-  - `!goto=line` - Jumps to the specified line.
-
-### Functions
-- Define and call functions using the `func` keyword.
-  - `func.name` - Defines a function named `name`.
-  - `func.~name` - Calls the function named `name`.
-  - `func.{go}~name` - Jumps to the function without returning.
-
-- **Return**: Use `return` to exit a function.
+- **jumpto**: Jump to a specific line using the `goto` keyword.
+  - `!jumpto=line` - Jumps to the specified line.
 
 ### Printing
 - **Print**: Display values or strings using the `prnt` keyword.
@@ -61,6 +54,14 @@ add("!goto=2")           # Go to line 2
   - `prnt.'string'` - Prints a string.
   - `prnt.++~var` - Converts a number to a character and prints it.
   - `prnt.endl` - Prints a newline.
+
+### Functions (Not Implemented Yet)
+- Define and call functions using the `func` keyword.
+  - `func.name` - Defines a function named `name`.
+  - `func.~name` - Calls the function named `name`.
+  - `func.{go}~name` - Jumps to the function without returning.
+
+- **Return**: Use `return` to exit a function.
 
 ### Conditional Jumps (Not Implemented Yet)
 - **Conditional Jumps**: Compare variables and jump to a specific line if the condition is met.
