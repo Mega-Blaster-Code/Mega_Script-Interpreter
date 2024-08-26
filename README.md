@@ -8,7 +8,7 @@ Mega_Script is a low-level programming language interpreter designed for simplic
 - [Language Features](#language-features)
   - [Variable Management](#variable-management)
   - [Arithmetic Operations](#arithmetic-operations)
-  - [Jump To](#jumpto)
+  - [Jump To](#JumpTo)
   - [Functions](#functions)
   - [Printing](#printing)
   - [Conditional Jumps](#conditional-jumps)
@@ -45,7 +45,9 @@ add("!goto=2")           # Go to line 2
   - `#mul:var1=var2.var3` - Multiplies `var3` by `var2` and stores the result in `var1`.
   - `#div:var1=var2.var3` - Divides `var3` by `var2` and stores the result in `var1`.
 
-- **jumpto**: Jump to a specific line using the `goto` keyword.
+### JumpTo
+- **jumpto**:
+  - Jump to a specific line using the `goto` keyword.
   - `!jumpto=line` - Jumps to the specified line.
 
 ### Printing
