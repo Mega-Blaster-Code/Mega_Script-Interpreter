@@ -1,32 +1,22 @@
-# Mega_Script.py
-from functions import FUNC
-
-vm = FUNC()
-
-func_list = ["" for _ in range(255)]
+from functions import VirtualMachine
+vm = VirtualMachine()
 
 
-def add(tex):
-    for j in range(len(func_list)):
-        if func_list[j] == '':
-            func_list[j] = tex
+instructions = [""] * 255
+
+
+def add(instruction):
+    for index, inst in enumerate(instructions):
+        if inst == '':
+            instructions[index] = instruction
             break
 
+#put your code here
 
-halt = False
-add("$define.x=0")
-add("$define.add=1")
-add("#sum:x=x.add")
-add("/prn.x")
-add("!goto=2")
-
-while not halt:
-    if vm.line >= len(func_list) or func_list[vm.line] == '':
-        halt = True
+# Main loop that processes instructions
+while not vm.halted:
+    if vm.line >= len(instructions) or instructions[vm.line] == '':
+        vm.halt()  # Stop if we reach the end of instructions or an empty line
     else:
-        inst = func_list[vm.line]
-        if inst == "halt":
-            halt = True
-        else:
-            vm.get_arg(inst)
-        vm.line += 1
+        vm.execute_instruction(instructions[vm.line])
+        vm.next_line()
