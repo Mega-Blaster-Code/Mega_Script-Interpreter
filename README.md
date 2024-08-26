@@ -1,6 +1,6 @@
 # Mega_Script Interpreter
 
-Mega_Script is a low-level programming language interpreter designed for simplicity and flexibility. This language is still in development and will include a compiler in the future. The interpreter is implemented in Python, consisting of two main files: `Mega_Script.py` and `functions.py`.
+Mega_Script is a low-level programming language interpreter. This language is still in development and will include a compiler in the future. The interpreter is implemented in Python, consisting of two main files: `Mega_Script.py` and `functions.py`.
 
 ## Table of Contents
 - [Overview](#overview)
