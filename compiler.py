@@ -1,2 +1,2 @@
 #Mega Compiler
-#Phyton --> Mega Script
+#Mega Script --> assembly
